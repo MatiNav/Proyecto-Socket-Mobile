@@ -8,7 +8,7 @@ let io;
  */
 function listenAddOrder(socket) {
   socket.on('addMenu', menu => {
-    socket.emit('menuChanges', menu);
+    io.emit('menuChanges', menu);
 
     console.log('El menú fuen enviado', JSON.stringify(menu, undefined, 2));
   });
